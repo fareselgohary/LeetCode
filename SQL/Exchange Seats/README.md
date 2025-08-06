@@ -1,57 +1,67 @@
-## Problem: Exchange Seats
-## Link : https://leetcode.com/problems/exchange-seats/description
+# 🪑 Exchange Seats (SQL)
 
-### Tables:
+## 🔗 Problem Link  
+[Exchange Seats – LeetCode](https://leetcode.com/problems/exchange-seats/description)
+
+---
+
+## 📘 Problem Description  
+
+### 📊 Tables
 
 **Seat**
 
-+-------------+---------+
 | Column Name | Type    |
-+-------------+---------+
+|-------------|---------|
 | id          | int     |
 | student     | varchar |
-+-------------+---------+
-id is the primary key (unique value) column for this table.
-Each row of this table indicates the name and the ID of a student.
-The ID sequence always starts from 1 and increments continuously.
----
 
-### Goal:
-
-Write a solution to swap the seat id of every two consecutive students. If the number of students is odd, the id of the last student is not swapped.
-
-Return the result table ordered by id in ascending order.
-
-The result format is in the following example.
+- `id` is the primary key (unique) for this table.  
+- Each row represents a student with a unique seat ID.  
+- IDs **start from 1** and **increase continuously**.
 
 ---
 
-### Example:
+### 🎯 Goal
 
-**Input**
+Write a SQL solution to **swap the seat id of every two consecutive students**.  
+If the number of students is **odd**, the **last student's seat remains unchanged**.
 
-Seat table:
-+----+---------+
-| id | student |
-+----+---------+
-| 1  | Abbot   |
-| 2  | Doris   |
-| 3  | Emerson |
-| 4  | Green   |
-| 5  | Jeames  |
-+----+---------+
+🔁 The result table should be **ordered by `id` in ascending order**.
 
-**Output**
+---
 
-+----+---------+
-| id | student |
-+----+---------+
-| 1  | Doris   |
-| 2  | Abbot   |
-| 3  | Green   |
-| 4  | Emerson |
-| 5  | Jeames  |
-+----+---------+
+## 💡 Example
 
-**Explanation**:  
-Note that if the number of students is odd, there is no need to change the last one's seat.
+### 🧾 Input
+
+**Seat** table:
+
+| id | student  |
+|----|----------|
+| 1  | Abbot    |
+| 2  | Doris    |
+| 3  | Emerson  |
+| 4  | Green    |
+| 5  | Jeames   |
+
+### 📤 Output
+
+| id | student  |
+|----|----------|
+| 1  | Doris    |
+| 2  | Abbot    |
+| 3  | Green    |
+| 4  | Emerson  |
+| 5  | Jeames   |
+
+### 🧠 Explanation:
+
+- Students with IDs 1 and 2 swap places.
+- Students with IDs 3 and 4 swap places.
+- Student with ID 5 stays in place (odd count).
+
+---
+
+## 🏷️ Tags  
+#SQL #LeetCode #Beginner #Database #InterviewPrep #Joins #CaseStatement
